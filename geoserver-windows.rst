@@ -7,6 +7,8 @@ Acerca de
 
 Documento publicado bajo licencia Creative Commons reconocimiento compartir-igual (CC-by-sa). Consultar autoría en el histórico de commits. Contribuciones bienvenidas.
 
+Este documento está basado en la instalación de Geoserver sobre Linux en https://github.com/oscarfonts/geoserver-deploy-doc/blob/master/geoserver-deploy.rst
+
 Configuración inicial de la máquina
 -----------------------------------
 Instalar Oracle Java SE Runtime Envorinment 7 (Windows x64)
