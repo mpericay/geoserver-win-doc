@@ -112,6 +112,7 @@ Entrar a:
 http://localhost:8080/geoserver/web/
 
 En "server status", combrobar que:
+
 - La JVM es la instalada Oracle Corporation: 1.7.0 (Java HotSpot(TM) 64-Bit Server VM)
 - el data directory apunta a E:\\geoserver_data
 
@@ -119,6 +120,7 @@ Seguridad
 ---------
 
 Seguir las notificaciones de seguridad que aparecen en la página principal de GeoServer:
+
 - Cambiar password de "admin".
 - Cambiar el master password.
 - Añadir “unrestricted policy jar files” de Java: descargar de http://www.oracle.com/technetwork/java/javase/downloads/jce-7-download-432124.html y sobreescribir archivos en C:\\Program Files\\Java\\jre7\\lib\\security
@@ -161,6 +163,7 @@ Descargar el fichero de malla de:
 Copiar el fichero de malla en E:\\geoserver_data\\user_projections
 
 Forzar que se use también para la proyección Google Earth. Crear un fichero en user_projections llamado epsg_operations.properties, con el siguiente contenido::
+
 4230,4258=PARAM_MT["NTv2", PARAMETER["Latitude and longitude difference file", "100800401.gsb"]]
 4230,4326=PARAM_MT["NTv2", PARAMETER["Latitude and longitude difference file", "100800401.gsb"]]
 
@@ -184,10 +187,13 @@ Hay que seguir los pasos definidos en http://docs.geoserver.org/stable/en/user/d
 
 5. Añadir variables de entorno: editar el fichero C:\\Program Files\\Apache Software Foundation\\Tomcat 7.0\\webapps\\geoserver\\WEB-INF\\web.xml y añadir::
 
-<context-param>
-<param-name>GDAL_DATA</param-name>
-<param-value>$GEOSERVER_DATA_DIR/gdal/gdal-data</param-value>
-</context-param> 
+ <context-param>
+ 
+   <param-name>GDAL_DATA</param-name>
+   
+   <param-value>$GEOSERVER_DATA_DIR/gdal/gdal-data</param-value>
+   
+ </context-param> 
 
 6. Bajar los drivers específicos de ECW y MRSID de http://demo.geo-solutions.it/share/github/imageio-ext/releases/1.1.X/1.1.10/native/gdal/windows/MSVC2010/
 y copiarlos a C:\\Windows\\System32\\ 
